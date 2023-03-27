@@ -2,8 +2,8 @@ import Home from "./home/page";
 
 export default function App() {
   return (
-    <main className="h-screen">
+    <div className="h-screen">
         <Home />
-    </main>
+    </div>
   )
 }

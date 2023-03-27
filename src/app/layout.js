@@ -1,6 +1,8 @@
-import Navbar from "@/components/navbar/page";
-import Sidebar from "@/components/sidebar/page";
+
+import { NavbarProvider } from "@/contexts/NavbarContexts";
 import "./globals.css";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
 export const metadata = {
     title: "Empyrean Ecommerce",
@@ -11,6 +13,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
+                <NavbarProvider>
+
+
                 <main>
                     <div>
                         <Sidebar />
@@ -20,6 +25,7 @@ export default function RootLayout({ children }) {
                         {children}
                     </div>
                 </main>
+                </NavbarProvider>
             </body>
         </html>
     );
